@@ -30,7 +30,7 @@ nodemon server/server
 ```
 
 #FRONTEND:
-1. in the to-do-list folder run:
+1. in the olimac-task-frontend folder run:
 ```
 npm install
 ```
