@@ -21,7 +21,7 @@ This app has the following features
 1. download the repository of back and front
 
 #Backend:
-1. in the BACKEND folder run:
+1. in the olimac-task-backend folder run:
 ```
 npm install
 ```
