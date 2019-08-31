@@ -1,3 +1,4 @@
+require('./config/config');
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
@@ -5,7 +6,7 @@ const bodyParser = require('body-parser');
 const app = express();
 
 
-const port = process.env.PORT || 3000;
+
 
 
 
@@ -29,13 +30,13 @@ app.use(require('../controllers/index'));
 
 
 //MONGO CONECTIONB AND CREATION OF SERVER
-mongoose.connect('mongodb://localhost:27017/task',
+mongoose.connect(process.env.URLDB,
   { useNewUrlParser: true, useFindAndModify: false }, (err, res) => {
     if (err) throw err;
     console.log('Base de datos ONLINE');
   });
 
 
-app.listen(port, () => {
-  console.log(`escuchando peticiones express en el puerto ${port}`);
+app.listen(process.env.PORT, () => {
+  console.log('escuchando peticiones express en el puerto',process.env.PORT);
 });
